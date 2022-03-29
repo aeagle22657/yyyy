@@ -11,7 +11,7 @@ RUN set -eux; \
     chmod 755 /usr/bin/fake-systemctl; \
     :
 run apt install openssh-server -y
-run sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+run sed -i 's/PermitRootLogin yes/PermitRootLogin prohibit-password/g' /etc/ssh/sshd_config
 run cat /etc/ssh/sshd_config
 
 
