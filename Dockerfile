@@ -11,3 +11,24 @@ RUN set -eux; \
     chmod 755 /usr/bin/fake-systemctl; \
     :
 run apt install openssh-server -y
+
+run cat /etc/ssh/sshd_config
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
