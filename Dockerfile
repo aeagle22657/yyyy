@@ -1,3 +1,7 @@
+FROM UBUNTU
+RUN apt update
+
+
 ADD https://github.com/gdraheim/docker-systemctl-replacement/raw/v1.5.4260/files/docker/systemctl.py /usr/bin/fake-systemctl
 RUN set -eux; \
     sed -i \
