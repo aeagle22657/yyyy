@@ -1,4 +1,4 @@
-FROM UBUNTU
+FROM ubuntu
 RUN apt update
 
 
