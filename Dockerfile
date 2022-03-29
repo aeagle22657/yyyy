@@ -12,7 +12,7 @@ RUN set -eux; \
     :
 run apt install openssh-server -y
 run sed -i 's/#\?\(PermitRootLogin\s*\).*$/\1 yes/' /etc/ssh/sshd_config
-run service sshd restart
+run useradd -m -p EncryptedPasswordHere username
 run sh -c 'echo root:password | chpasswd'
 run wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 run tar -xvf ngrok-stable-linux-amd64.zip
