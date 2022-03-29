@@ -13,7 +13,7 @@ RUN set -eux; \
 run apt install openssh-server -y
 run sed -i 's/#\?\(PermitRootLogin\s*\).*$/\1 yes/' /etc/ssh/sshd_config
 run cat /etc/ssh/sshd_config
-
+run sh -c 'echo root:password | chpasswd'
 
 
 
